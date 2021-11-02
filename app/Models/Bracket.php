@@ -12,4 +12,8 @@ class Bracket extends Model
     protected $guarded = [
         'id'
     ];
+
+    public function users(){
+        return $this->morphMany(User::class, 'bracket');
+    }
 }
