@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Team;
+use App\Models\User;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             BracketSeeder::class,
         ]);
+        User::factory(50)->create();
+        Team::factory(10)->create();
     }
 }

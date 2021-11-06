@@ -41,6 +41,10 @@ class User extends Authenticatable
     ];
 
     public function bracket(){
-        return $this->morphTo();
+        return $this->belongsTo(Bracket::class);
+    }
+
+    public function team(){
+        return $this->belongsTo(Team::class);
     }
 }

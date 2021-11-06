@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -53,4 +53,55 @@
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-guest-layout> --}}
+
+@extends('layouts.app')
+
+@section('body')
+<div class="login-form position-absolute top-50 start-50 translate-middle text-center">
+    <h1>Welcome to DOTA 2</h1>
+    <p class="mb-5 text-warning">
+        Login to start playing!
+    </p>
+    <form action="{{ route('login') }}" method="POST">
+        @csrf
+        <div class="row mb-3">
+            <div class="form-floating">
+                <input type="email" name="email" class="form-control shadow-none @error('email') is-invalid @enderror"
+                    id="email" placeholder="name@example.com" autocomplete="off" value="{{ old('email') }}" autofocus>
+                <label for="email">Email</label>
+                @error('email')
+                    <div class="text-start invalid-feedback text-warning">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-floating">
+                <input type="password" name="password"
+                    class="form-control shadow-none @error('password') is-invalid @enderror" id="password"
+                    placeholder="name@example.com">
+                <label for="password">Password</label>
+                @error('password')
+                    <div class="text-start invalid-feedback text-warning">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center login-optional">
+            <label for="remember_me" class="inline-flex items-center ms-0">
+                <input id="remember_me" type="checkbox"
+                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    name="remember">
+                <span class="ml-2 text-sm text-gray-600 remember-me">{{ __('Ingat saya') }}</span>
+            </label>
+            <a href="" class="text-decoration-none text-dark-color forgot">Lupa Password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary mb-5 bg-base-color">Masuk</button>
+    </form>
+    <a href="/register" class="text-decoration-none text-dark-color not-registered">Not registered yet? <span
+            class="text-base-color">Create Account!</span></a>
+</div>
+@endsection

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Bracket extends Model
+class Team extends Model
 {
     use HasFactory;
 
@@ -13,7 +13,7 @@ class Bracket extends Model
         'id'
     ];
 
-    public function users(){
+    public function players(){
         return $this->hasMany(User::class);
     }
 }

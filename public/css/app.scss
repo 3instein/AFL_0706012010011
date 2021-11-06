@@ -1,0 +1,320 @@
+$color-1: #0a1010;
+$color-2: #444444;
+$color-3: #DA0037;
+$color-4: #EDEDED;
+$color-5: #9F2916;
+$leaderboard: #0a1010;
+
+@font-face {
+  font-family: mainFont;
+  src: url(main.otf);
+}
+
+@font-face {
+  font-family: 'Oswald', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+}
+
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix") format("embedded-opentype"), url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff") format("woff"), url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf") format("truetype"),
+      url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance-SemiBold";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix") format("embedded-opentype"), url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff") format("woff"), url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf") format("truetype"),
+      url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Reaver";
+  src: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff2') format('woff2'), 
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff') format('woff'),
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff2') format('woff2'), 
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff') format('woff'),
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff2') format('woff2'), 
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff') format('woff'),
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff2') format('woff2'), 
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff') format('woff'),
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff2') format('woff2'), 
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff') format('woff'),
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ravenhook";
+  src: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Ravenhook.woff2') format('woff2'), 
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Ravenhook.woff') format('woff'),
+       url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Ravenhook.ttf') format('truetype');
+  font-style: normal;
+}
+
+$mainFont: mainFont;
+$secondaryFont: secondaryFont;
+
+title {
+  font-family: $mainFont;
+}
+
+.navbar {
+  background-color: $color-1;
+
+  .navbar-brand {
+    font-family: $mainFont;
+  }
+  .nav-item {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+}
+
+body {
+  
+  background-color: $color-1;
+  color: white;
+  font-family: $secondaryFont;
+
+  .home {
+    h1{
+      display: inline-block;
+      padding-right: 10%;
+      border-bottom: 5px solid #888;
+    }
+  
+    .card-news{
+      
+      width: 60%;
+  
+      &:not(:first-child){
+        margin-top: 2rem;
+      }
+  
+      a{
+        text-decoration: none;
+        color: $color-4;
+        
+        :hover{
+          color: $color-4;
+        }
+        .card{
+          background-color: $color-2;
+          font-family: $secondaryFont;
+        }
+      }
+    }
+  }
+
+  .login-form{
+    font-family: $secondaryFont;
+    width: 30%;
+    background-color: $color-5;
+    padding: 2rem;
+    color: $color-1;
+
+    h1{
+      font-weight: bold;
+    }
+
+    form{
+      .remember-me{
+        color: $color-4;
+      }
+      .forgot{
+        color: $color-4;
+      }
+    }
+
+    .not-registered{
+      color: $color-4;
+    }
+  }
+
+  .leaderboard{
+
+    #outerContainer{
+      background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images//leaderboards/bg_repeat.jpg');
+      background-repeat:repeat-y;
+      background-position:top center;
+
+      #contentContainer{
+        background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images//leaderboards/bg_top.jpg');
+        background-position:top center;
+        background-repeat:no-repeat;
+        #content{
+          background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images//leaderboards/bg_top.jpg');
+          background-position:top center;
+          background-repeat:no-repeat;
+          position:relative;
+          width: 938px;
+          min-height:700px;
+          margin-right:auto;
+          margin-left:auto;
+          text-align:center;
+
+          h1{
+            font-weight: normal;
+            font-size: 36px;
+            color: #b7b7b4;
+            margin: 0;
+            padding: 48px 0px 16px 0px;
+          }
+
+          .leaderboard-table{
+            margin-top: 6rem;
+            
+            table{
+              border: 2px solid #3b3a38;
+              margin: 0 auto;
+
+              border-top-width: 2px;
+              border-right-width: 2px;
+              border-bottom-width: 2px;
+              border-left-width: 2px;
+              border-top-color: rgb(59, 58, 56);
+              border-right-color: rgb(59, 58, 56);
+              border-bottom-color: rgb(59, 58, 56);
+              border-left-color: rgb(59, 58, 56);
+              -webkit-border-horizontal-spacing: 0px;
+              -webkit-border-vertical-spacing: 0px;
+
+              tr{
+                border: 2px solid #3b3a38;
+              }
+
+              td{
+                border: 2px solid #3b3a38;
+                text-align: left;
+                color: #a4a4a4;
+              }
+
+              thead{
+                display: table-header-group;
+                vertical-align: middle;
+                border: 2px solid #3b3a38;
+              }
+
+              tbody{
+                display: table-row-group;
+                vertical-align: middle;
+                border: 2px solid #3b3a38;
+              }
+            }
+
+            .division{
+              text-align: center;
+              border: 2px solid #3b3a38;
+            }
+
+            .player{
+              vertical-align: middle;
+              text-align: left;
+              width: 300px;
+            }
+
+            .rating{
+              text-align: center;
+              width: 75px;
+              padding-right: 10px;
+              vertical-align: middle;
+              border: 2px solid #3b3a38;
+            }
+
+            .bracket{
+              text-align: center;
+              width: 75px;
+              padding-right: 10px;
+              vertical-align: middle;
+              border: 2px solid #3b3a38;
+            }
+
+            .player_info{
+              background-color: #181818;
+              color: #5e5e5e;
+              
+              .player_rank{
+                text-align: center;
+              }
+
+              .team_tag{
+                font-weight: normal;
+              }
+
+              .player_name{
+                text-align: left;
+                overflow: hidden;
+                max-width: 300px;
+                width: 300px;
+                color: #d0d0d0;
+                font-weight: 700;
+              }
+
+              .player_rating{
+                text-align: center;
+              }
+
+              .player_bracket{
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #bottomContainer_1{
+      background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images//leaderboards/bg_bottom.jpg');
+      background-position:top center;
+      background-repeat:no-repeat;
+      margin-right:auto;
+      margin-left:auto;
+      position:relative;
+      height:524px;
+      #bottomContainer_2{
+        background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images//leaderboards/bg_bottom.jpg');
+        background-position:top center;
+        background-repeat:no-repeat;
+        margin-right:auto;
+        margin-left:auto;
+        position:relative;
+        height:524px;
+        width:938px;
+      }
+    }
+  }
+
+  .player-info{
+    color: $color-5;
+  }
+  
+}
