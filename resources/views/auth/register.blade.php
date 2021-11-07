@@ -70,8 +70,20 @@
         @csrf
         <div class="row mb-3">
             <div class="form-floating">
+                <input type="text" name="username" class="form-control shadow-none @error('username') is-invalid @enderror"
+                    id="username" placeholder="name@example.com" autocomplete="off" value="{{ old('username') }}" autofocus>
+                <label for="username">Username</label>
+                @error('username')
+                    <div class="text-start invalid-feedback text-warning">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="form-floating">
                 <input type="email" name="email" class="form-control shadow-none @error('email') is-invalid @enderror"
-                    id="email" placeholder="name@example.com" autocomplete="off" value="{{ old('email') }}" autofocus>
+                    id="email" placeholder="name@example.com" autocomplete="off" value="{{ old('email') }}">
                 <label for="email">Email</label>
                 @error('email')
                     <div class="text-start invalid-feedback text-warning">
@@ -93,18 +105,9 @@
                 @enderror
             </div>
         </div>
-        <div class="d-flex justify-content-between align-items-center login-optional">
-            <label for="remember_me" class="inline-flex items-center ms-0">
-                <input id="remember_me" type="checkbox"
-                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                    name="remember">
-                <span class="ml-2 text-sm text-gray-600 remember-me">{{ __('Ingat saya') }}</span>
-            </label>
-            <a href="" class="text-decoration-none text-dark-color forgot">Lupa Password?</a>
-        </div>
-        <button type="submit" class="btn btn-primary mb-5 bg-base-color">Masuk</button>
+        <button type="submit" class="btn btn-primary mb-5 bg-base-color">Register</button>
     </form>
-    <a href="/register" class="text-decoration-none text-dark-color not-registered">Not registered yet? <span
-            class="text-base-color">Create Account!</span></a>
+    <a href="{{ route('login') }}" class="text-decoration-none text-dark-color not-registered">Already have an account? <span
+            class="text-base-color">Sign in now!</span></a>
 </div>
 @endsection

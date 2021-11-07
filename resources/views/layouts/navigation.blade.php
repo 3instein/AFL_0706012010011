@@ -25,18 +25,29 @@
                     </li>
                 @endauth
             </ul>
-            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0 d-flex align-items-center">
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('login') ? 'active' : '' }}" aria-current="page"
+                        <a class="nav-link {{ request()->is('login') ? 'active' : '' }}"
                             href="{{ route('login') }}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('register') ? 'active' : '' }}" aria-current="page"
+                        <a class="nav-link {{ request()->is('register') ? 'active' : '' }}"
                             href="{{ route('register') }}">Register</a>
                     </li>
                 @endguest
                 @auth
+                    <li class="nav-item">
+                        <a href="{{ route('profile') }}">
+                            <img src="{{ empty(auth()->user()->profile_photo_path) ? 'media/profile_placeholder.png' : Storage::url(auth()->user()->profile_photo_path) }}" class="rounded-circle mx-1 profile-photo" width="64">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('profile') ? 'active' : '' }}"
+                            href="{{ route('profile') }}">
+                            Profile
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf

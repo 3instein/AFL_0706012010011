@@ -293,4 +293,8 @@ body .leaderboard #bottomContainer_1 #bottomContainer_2 {
 body .player-info {
   color: #9F2916;
 }
+
+body .profile-photo {
+  border: 0.5px solid #EDEDED;
+}
 /*# sourceMappingURL=app.css.map */
