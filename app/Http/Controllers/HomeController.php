@@ -20,8 +20,4 @@ class HomeController extends Controller
             'players' => User::orderBy('rating', 'DESC')->take(1000)->get()
         ]);
     }
-    
-    public function team(){
-        return view('team');
-    }
 }

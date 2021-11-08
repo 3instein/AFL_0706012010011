@@ -92,7 +92,7 @@
                 @enderror
             </div>
         </div>
-        <div class="row">
+        <div class="row mb-3">
             <div class="form-floating">
                 <input type="password" name="password"
                     class="form-control shadow-none @error('password') is-invalid @enderror" id="password"

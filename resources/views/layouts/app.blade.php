@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Dota 2</title>
-    <link rel="shortcut icon" type="image/jpg" href="media/logo.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="{{ asset('media/logo.png') }}"/>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">

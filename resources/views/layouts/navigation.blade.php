@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand fs-1 d-flex align-items-center" href="{{ route('home') }}">
-            <img src="media/logo.png" alt="" width="64" class="d-inline-block align-text-top me-3">
+            <img src="{{ asset('media/logo.png') }}" alt="" width="64" class="d-inline-block align-text-top me-3">
             DOTA 2
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -20,8 +20,8 @@
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('team') ? 'active' : '' }}"
-                            href="{{ route('team') }}">Team</a>
+                        <a class="nav-link {{ request()->is('teams*') ? 'active' : '' }}"
+                            href="{{ route('teams.create') }}">Team</a>
                     </li>
                 @endauth
             </ul>
@@ -39,7 +39,7 @@
                 @auth
                     <li class="nav-item">
                         <a href="{{ route('profile') }}">
-                            <img src="{{ empty(auth()->user()->profile_photo_path) ? 'media/profile_placeholder.png' : Storage::url(auth()->user()->profile_photo_path) }}" class="rounded-circle mx-1 profile-photo" width="64">
+                            <img src="{{ empty(auth()->user()->profile_photo_path) ? asset('media/profile_placeholder.png') : Storage::url(auth()->user()->profile_photo_path) }}" class="rounded-circle mx-1 profile-photo" style="width: 64px; height: 64px; object-fit: cover;">
                         </a>
                     </li>
                     <li class="nav-item">
