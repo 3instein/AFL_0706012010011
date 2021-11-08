@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             'bracket_id' => 8
         ]);
         User::factory(50)->create();
-        Team::factory(10)->create();
+        // Team::factory(10)->create();
 
         Update::create([
             'title' => 'Beginning of New Era',

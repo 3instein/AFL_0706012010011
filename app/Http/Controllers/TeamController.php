@@ -184,8 +184,11 @@ class TeamController extends Controller
      * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Team $team)
+    public function destroy(Request $request, Team $team)
     {
+        $request->user()->update([
+            'team_id' => null
+        ]);
         $team->delete();
 
         return back();

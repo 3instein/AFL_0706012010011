@@ -17,8 +17,7 @@ class AddTeamIdToUsersTable extends Migration
             $table->foreignId('team_id')
                 ->after('bracket_id')
                 ->nullable()
-                ->constrained()
-                ->cascadeOnDelete();
+                ->constrained();
         });
     }
 

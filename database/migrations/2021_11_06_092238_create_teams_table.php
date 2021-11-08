@@ -20,8 +20,7 @@ class CreateTeamsTable extends Migration
                 ->unique()
                 ->references('id')
                 ->on('users')
-                ->constrained()
-                ->cascadeOnDelete();
+                ->constrained();
             $table->string('tag');
             $table->timestamps();
         });
