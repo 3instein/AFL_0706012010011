@@ -295,6 +295,7 @@ body .leaderboard #bottomContainer_1 #bottomContainer_2 {
 }
 
 body .player-info {
+  background-color: white;
   color: #9F2916;
 }
 
