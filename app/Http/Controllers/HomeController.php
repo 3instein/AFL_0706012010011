@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Update;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
-        return view('index');
+        return view('index', [
+            'updates' => Update::all()
+        ]);
     }
 
     public function play(){

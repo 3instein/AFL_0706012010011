@@ -87,6 +87,10 @@ body {
   font-family: secondaryFont;
 }
 
+body .card {
+  background-color: #444444;
+}
+
 body .home h1 {
   display: inline-block;
   padding-right: 10%;
@@ -111,7 +115,7 @@ body .home .card-news a :hover {
 }
 
 body .home .card-news a .card {
-  background-color: #444444;
+  background-color: #444444 !important;
   font-family: secondaryFont;
 }
 
@@ -304,5 +308,9 @@ body .team-table {
   margin-left: -1.5rem;
   background-color: #EDEDED;
   padding: 2rem;
+}
+
+body .background {
+  background-color: white;
 }
 /*# sourceMappingURL=app.css.map */

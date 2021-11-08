@@ -105,6 +105,10 @@ body {
   color: white;
   font-family: $secondaryFont;
 
+  .card {
+    background-color: $color-2;
+  }
+
   .home {
     h1{
       display: inline-block;
@@ -128,7 +132,7 @@ body {
           color: $color-4;
         }
         .card{
-          background-color: $color-2;
+          background-color: $color-2 !important;
           font-family: $secondaryFont;
         }
       }
@@ -328,6 +332,9 @@ body {
     background-color: #EDEDED;
     padding: 2rem;
   }
-  
+
+  .background{
+    background-color: white;
+  }
   
 }
